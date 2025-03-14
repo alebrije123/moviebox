@@ -4,6 +4,14 @@
   padding: 2rem;
   text-align: center;
 }
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #121826 !important;
+  color: #fff !important;
+  font-family: 'Centra', sans-serif !important;
+}
 
 .logo {
   height: 6em;
