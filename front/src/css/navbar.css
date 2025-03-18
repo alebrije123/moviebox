@@ -1,0 +1,14 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #61d8e1;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: fixed; /* Esto harÃ¡ que la barra se quede fija en la parte superior */
+  top: 0;
+  left: 0;
+  z-index: 100; /* Para asegurarse de que siempre estÃ© por encima del contenido */
+}

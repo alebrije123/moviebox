@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form, Container, Row, Col, InputGroup } from "react-bootstrap";
 import "../../css/login.css";
-import loginImage from "../../assets/login.jpg";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -20,58 +19,51 @@ export const Login = () => {
 
   return (
     <>
-      <div className="login">
-        <div className="login-box">
-        <div className="illustration-wrapper">
-        <img src={loginImage} alt="Login" />
+      <Container className="login-container">
+        <div className="iconLogin">
+          <i className="bi bi-person-circle"></i>
         </div>
-          <Container>
-            <h2>Iniciar sesión</h2>
+        <h2 className="text-center">Iniciar sesión</h2>
 
-            {error && <div className="alert alert-danger">{error}</div>}
-            <Form className="container-form" onSubmit={handleSubmit}>
-              <Form.Group as={Row} controlId="formEmail" className="mb-3">
-                <Col sm="12">
-                  <InputGroup>
-                    <InputGroup.Text>
-                      <i className="bi bi-person-fill"></i>
-                    </InputGroup.Text>
-                    <Form.Control
-                      type="email"
-                      placeholder="Usuario"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                  </InputGroup>
-                </Col>
-              </Form.Group>
+        {error && <div className="alert alert-danger text-center">{error}</div>}
 
-              <Form.Group as={Row} controlId="formPassword" className="mb-4">
-                <Col sm="12">
-                  <InputGroup>
-                    <InputGroup.Text>
-                      <i className="bi bi-lock-fill"></i>
-                    </InputGroup.Text>
-                    <Form.Control
-                      type="password"
-                      placeholder="Contraseña"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <InputGroup.Text>
-                      <i className="bi bi-eye-slash-fill"></i>
-                    </InputGroup.Text>
-                  </InputGroup>
-                </Col>
-              </Form.Group>
+        <Form className="container-form" onSubmit={handleSubmit}>
+          <Form.Group controlId="formEmail" className="mb-3 input-box">
+            <InputGroup>
+              <span className="input-icon">
+                <i className="bi bi-person-fill"></i>
+              </span>
+              <Form.Control
+                type="email"
+                placeholder="Usuario"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </InputGroup>
+          </Form.Group>
 
-              <Button variant="primary" type="submit" className="w-100">
-                Iniciar sesión
-              </Button>
-            </Form>
-          </Container>
-        </div>
-      </div>
+          <Form.Group controlId="formPassword" className="mb-4 input-box">
+            <InputGroup>
+              <span className="input-icon">
+                <i className="bi bi-lock-fill"></i>
+              </span>
+              <Form.Control
+                type="password"
+                placeholder="Contraseña"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <span className="input-icon toggle-password">
+                <i className="bi bi-eye-slash-fill"></i>
+              </span>
+            </InputGroup>
+          </Form.Group>
+
+          <Button variant="primary" type="submit" className="btn-login">
+            Iniciar sesión
+          </Button>
+        </Form>
+      </Container>
     </>
   );
 };
