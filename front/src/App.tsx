@@ -13,9 +13,7 @@ function App() {
   return (
     <div className="App">
       <MyNavbar />
-      <div className="content">
-        <Home />
-      </div>
+      <Home />
       <Footer />
     </div>
   );
