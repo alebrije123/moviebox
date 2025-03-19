@@ -23,7 +23,7 @@ export const Login = () => {
         <div className="iconLogin">
           <i className="bi bi-person-circle"></i>
         </div>
-        <h2 className="text-center">Iniciar sesión</h2>
+        <h2 className="text-center text-white">Iniciar sesión</h2>
 
         {error && <div className="alert alert-danger text-center">{error}</div>}
 

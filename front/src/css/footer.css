@@ -1,13 +1,11 @@
-.App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Hace que ocupe toda la altura de la pantalla */
+
+body {
+  align-items: flex-end;
 }
 
 .footer {
-  width: 100%;
-  background-color: #343a40;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
+  background: #393939;
+  min-height: 100px;
+  width: 100vw;
+  padding: 20px 0px;
 }
