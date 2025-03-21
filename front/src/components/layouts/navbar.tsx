@@ -1,17 +1,15 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, Button, Modal, InputGroup, Form } from "react-bootstrap";
 import "../../css/navbar.css";
 import { Login } from "../usuario/login";
 
 export const MyNavbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
 
   return (
     <>
-      <Navbar variant="dark" className="shadow-sm" fixed="top">
+      <Navbar variant="dark" className="shadow-sm" >
         <Container>
           <Navbar.Brand href="/">MovieBox</Navbar.Brand>
           <Navbar.Collapse id="basic-navbar-nav">
@@ -19,6 +17,7 @@ export const MyNavbar = () => {
               <Nav.Link onClick={() => setShowLogin(true)}>Inicio</Nav.Link>
               <Nav.Link>Registro</Nav.Link>
               <Nav.Link>Peliculas</Nav.Link>
+              <Nav.Link>Reseñas</Nav.Link>
             </Nav>
             <Form className="d-flex ms-3">
               <Form.Control
