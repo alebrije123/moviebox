@@ -1,9 +1,15 @@
 .custom-carousel {
-    max-width: 20%;
-    margin: 0 auto;
-  }
+  max-width: 30%;
+  margin: 0 auto;
+}
 
-  .card-img-top { 
-    height: 200px; 
-    object-fit: cover; 
-  }
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+.container-top {
+  margin-top: 80px;
+}
+.container-home {
+  margin-top: 60px;
+}
