@@ -1,0 +1,16 @@
+.carousel-item {
+  position: relative;
+}
+.carousel-caption {
+  background-color: rgba(26, 28, 146, 0.506); /* Fondo negro con opacidad del 50% */
+}
+.movie-vote {
+  background: #272532;
+  color: orange;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+} 
+.movie-stars i {
+  color: orange;
+}
