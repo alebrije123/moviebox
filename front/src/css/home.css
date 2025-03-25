@@ -1,5 +1,5 @@
-.custom-carousel {
-  max-width: 30%;
+.custom-carousel-home {
+  max-width: 40%;
   margin: 0 auto;
 }
 
@@ -7,9 +7,80 @@
   height: 200px;
   object-fit: cover;
 }
-.container-top {
+.container-top-home {
   margin-top: 80px;
 }
-.container-home {
-  margin-top: 60px;
+
+.title-container-home {
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #0e1028;
+  padding: 80px 100px;
+  text-align: center;
+}
+
+.icono-cinema {
+  width: 180px;
+  height: auto;
+}
+
+.card-ind {
+  color: rgb(252, 250, 252);
+  padding: 1rem;
+  height: 100%;
+  transform: scale(1);
+  transition: all 1s;
+  margin: 0 50px; /* Centrar horizontalmente */
+  background-color: #192851; /*AQUI ES DONDE CAMBIA EL COLOR DEL FONDO DE LA TARJETA?*/
+  max-width: 300px;
+  border-radius: 30px;
+  box-shadow: 0 0 15px 5px rgba(34, 48, 87, 0.559);
+}
+
+.card-ind:hover {
+  transform: scale(1.1);
+  background: #6d3583d0;
+  color: rgb(255, 255, 255);
+  transition: all 0.7s;
+
+  box-shadow: 0 0 15px 5px rgba(40, 54, 92, 0.559);
+}
+
+/*
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  scroll-behavior: smooth;
+}*/
+
+.cards-home {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.card-ind img {
+  width: 100%;
+  border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card-subtitulo{
+  margin: 30px;
+}
+.card-parrafo{
+  margin-bottom: 50px;
+}
+.subtitulo-container{
+  margin-bottom: 300px;
 }
