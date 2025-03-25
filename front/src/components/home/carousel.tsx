@@ -32,13 +32,14 @@ export const CarouselComponent = () => {
         ></button>
       </div>
       <div className="carousel-inner">
-        <div className="carousel-item active">
+      <div className="carousel-item">
           <img
-            src="https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%201.png"
+            src="https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%207.png"
+            className="d-block w-100"
             alt="..."
           />
           <div className="carousel-caption d-flex flex-column justify-content-center align-items-start">
-            <h4 className="movie-title">Loki</h4>
+            <h4 className="movie-title">First slide label</h4>
             <div className="d-flex align-items-center justify-content-end w-100">
               <div className="movie-stars">
                 {[...Array(4)].map((_, index) => (

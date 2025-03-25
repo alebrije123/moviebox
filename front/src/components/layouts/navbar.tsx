@@ -1,23 +1,24 @@
 import { useState } from "react";
-import {
-  Navbar,
-  Nav,
-  Container,
-  Button,
-  Modal,
-  InputGroup,
-  Form,
-} from "react-bootstrap";
+import { Navbar, Nav, Container, Button, Modal, Form } from "react-bootstrap";
 import "../../css/navbar.css";
 import { Login } from "../usuario/login";
+import { Home } from "../home/home";
 
-export const MyNavbar = () => {
+interface MyNavbarProps {
+  homeRef: React.RefObject<HTMLDivElement | null>;
+}
+
+export const MyNavbar = ({ homeRef }: MyNavbarProps) => {
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
 
+  const scrollToHome = () => {
+    homeRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
-      <div className="header-container">
+      <div className="header-container-navbar">
         <Navbar variant="dark" className="shadow-sm">
           <Container>
             <Navbar.Brand href="/">MovieBox</Navbar.Brand>
@@ -27,6 +28,7 @@ export const MyNavbar = () => {
                 <Nav.Link>Registro</Nav.Link>
                 <Nav.Link>Peliculas</Nav.Link>
                 <Nav.Link>Reseñas</Nav.Link>
+                <Nav.Link>Chat</Nav.Link>
               </Nav>
               <Form className="d-flex ms-3">
                 <Form.Control
@@ -45,10 +47,15 @@ export const MyNavbar = () => {
         <section className="titles">
           <h1>MovieBox</h1>
           <p>
-          Las películas son historias que nos acompañan para siempre. Encuentra las tuyas aquí.
+            Las películas son historias que nos acompañan para siempre.
+            Encuentra las tuyas aquí.
           </p>
         </section>
+        <div className="section-icon aboutme" data-anchor="aboutme">
+          <i className="bi bi-caret-down-fill" onClick={scrollToHome}></i>
+        </div>
       </div>
+
       <Modal
         show={showLogin}
         onHide={() => setShowLogin(false)}
