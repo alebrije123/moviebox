@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Navbar, Nav, Container, Button, Modal, Form } from "react-bootstrap";
 import "../../css/navbar.css";
 import { Login } from "../usuario/login";
-import { Home } from "../home/home";
 
 interface MyNavbarProps {
   homeRef: React.RefObject<HTMLDivElement | null>;
@@ -38,12 +37,13 @@ export const MyNavbar = ({ homeRef }: MyNavbarProps) => {
                   aria-label="Buscar"
                 />
                 <Button variant="outline-light">
-                  <i className="bi bi-search"></i>
+                  <i className="bi bi-search" />
                 </Button>
               </Form>
             </Navbar.Collapse>
           </Container>
         </Navbar>
+
         <section className="titles">
           <h1>MovieBox</h1>
           <p>
@@ -51,8 +51,9 @@ export const MyNavbar = ({ homeRef }: MyNavbarProps) => {
             Encuentra las tuyas aquí.
           </p>
         </section>
+
         <div className="section-icon aboutme" data-anchor="aboutme">
-          <i className="bi bi-caret-down-fill" onClick={scrollToHome}></i>
+          <i className="bi bi-caret-down-fill" onClick={scrollToHome} />
         </div>
       </div>
 
