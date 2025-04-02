@@ -6,6 +6,7 @@ import { MyNavbar } from "./components/layouts/navbar.tsx";
 import { Footer } from "./components/layouts/footer.tsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+
 function App() {
   const homeRef = useRef<HTMLDivElement>(null);
 
