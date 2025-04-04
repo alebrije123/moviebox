@@ -1,4 +1,4 @@
-import "../../css/carousel.css";
+import "../../css/featuredMoviesCarousel.css";
 
 const imags = [
   "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%207.png",
@@ -28,7 +28,7 @@ const images = [
     src: "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%202.png",
     title: "Pelicula 2",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit mollis, feugiat magna consequat fames accumsan cum lobortis posuere, molestie massa vel mattis egestas nascetur ut. Sed turpis habitant ad purus elementum mi sapien cras vulputate, morbi vehicula feugiat auctor nunc quam proin litora primis, inceptos ante ut tempor euismod in libero dapibus. Enim ultricies placerat molestie blandit mauris non ad ut vestibulum inceptos donec lacinia risus a quis, eleifend purus varius nascetur venenatis dictumst habitasse scelerisque est accumsan duis hendrerit hac viverra.",
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit mollis, feugiat magna consequat fames accumsan cum lobortis posuere, molestie massa vel mattis egestas nascetur ut. Sed turpis habitant ad purus elementum mi sapien cras vulputate, morbi vehicula feugiat auctor nunc quam proin litora primis, inceptos ante ut tempor euismod in libero dapibus. Enim ultricies placerat molestie blandit mauris non ad ut vestibulum inceptos donec lacinia risus a quis.",
     tiempo: "1h 27 min",
     fecha: "2020",
     genero: "Aventura, Fantasía, Acción, Familia",
@@ -52,13 +52,14 @@ const images = [
 
 export const FeaturedMoviesCarousel = () => {
   return (
-    <div
-      id="carouselIndicators"
-      className="carousel slide"
-      data-bs-ride="carousel"
-      data-bs-interval="3000"
-    >
-      <div className="carrusel-container">
+    <>
+      <h1 className="carousel-title-principal">Mejores valoradas</h1>
+      <div
+        id="carouselIndicators"
+        className="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
+      >
         <div className="carousel-indicators">
           {images.map((_, index) => (
             <button
@@ -78,37 +79,41 @@ export const FeaturedMoviesCarousel = () => {
               className={`carousel-item ${index === 0 ? "active" : ""}`}
               key={index}
             >
-              <div className="carousel-content">
-                <img
-                  src={item.src}
-                  className="d-block"
-                  alt={`Slide ${index + 1}`}
-                />
-                <div className="carousel-information">
-                  <h2 className="title-pointer">{item.title}</h2>
-                  <div className="container-time-date">
-                    <div className="time-container">
+              <div className="carousel-content d-flex h-100">
+                <div className="image-container">
+                  <img
+                    src={item.src}
+                    className="d-block"
+                    alt={`Slide ${index + 1}`}
+                  />
+                </div>
+                <div className="carousel-information d-flex h-100 flex-column justify-content-center">
+                  <h1 className="carousel-title">{item.title}</h1>
+                  <div className="container-time-date d-flex">
+                    <div className="time-container d-flex align-items-center">
                       <i className="bi bi-clock-fill"></i>
-                      <h6>{item.tiempo}</h6>
+                      <h5 className="m-0">{item.tiempo}</h5>
                     </div>
-                    <div className="calendar-container">
+                    <div className="calendar-container d-flex align-items-center">
                       <i className="bi bi-calendar2-week-fill"></i>
-                      <h6>{item.fecha}</h6>
+                      <h5 className="m-0">{item.fecha}</h5>
                     </div>
                   </div>
-                  <div className="description-container">
-                    <p className="parrafo">{item.description}</p>
+                  <div className="description-container d-flex aling-items-center">
+                    <p>{item.description}</p>
                   </div>
                   <h6>Género:&nbsp; {item.genero}</h6>
                   <h6>Actores:&nbsp; {item.actores}</h6>
 
-                  <div className="d-flex align-items-center w-100">
+                  <div className="custom-width d-flex align-items-center w-100 justify-content-end">
                     <div className="movie-stars">
                       {[...Array(4)].map((_, index) => (
-                        <i key={index} className="bi bi-star-fill"></i>
+                        <i key={index} className="bi bi-star-fill ms-1"></i>
                       ))}
                     </div>{" "}
-                    <h2 className="movie-vote ms-2">{item.valoracion}</h2>
+                    <h1 className="movie-vote ms-3 text-aling-center">
+                      {item.valoracion}
+                    </h1>
                   </div>
                 </div>
               </div>
@@ -122,7 +127,7 @@ export const FeaturedMoviesCarousel = () => {
           data-bs-slide="prev"
         >
           <span
-            className="carousel-control-prev-icon w-75 h-75"
+            className="carousel-control-prev-icon w-100 h-100"
             aria-hidden="true"
           ></span>
           <span className="visually-hidden">Previous</span>
@@ -134,12 +139,12 @@ export const FeaturedMoviesCarousel = () => {
           data-bs-slide="next"
         >
           <span
-            className="carousel-control-next-icon w-75 h-75"
+            className="carousel-control-next-icon w-100 h-100"
             aria-hidden="true"
           ></span>
           <span className="visually-hidden">Next</span>
         </button>
       </div>
-    </div>
+    </>
   );
 };
