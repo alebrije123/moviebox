@@ -1,0 +1,88 @@
+:root {
+  --primary-bg: #272532;
+  --highlight-color: orange;
+  --text-color: white;
+}
+#carouselIndicators {
+  max-width: 60%;
+  margin: 0 auto;
+}
+.carousel-indicators {
+  transform: translateY(150%);
+}
+.carousel-title-principal {
+  color: var(--text-color);
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.carousel-item {
+  align-items: stretch;
+}
+.carousel-information {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.372);
+  color: var(--text-color);
+  padding: 30px;
+}
+.carousel-title {
+  cursor: pointer;
+}
+.container-time-date {
+  padding-top: 10px;
+  gap: 440px;
+}
+.time-container,
+.calendar-container {
+  gap: 8px;
+}
+.description-container {
+  width: 100%;
+  height: 250px;
+}
+.image-container {
+  height: 250px;
+  cursor: pointer;
+}
+
+.carousel-item img {
+  width: 100%;
+  object-fit: cover;
+}
+.carousel-information p {
+  font-family: Arial, sans-serif;
+  font-size: 1.1rem;
+  padding: 35px 25px;
+  text-align: justify;
+}
+.movie-stars i {
+  color: var(--highlight-color);
+  font-size: 1.7rem;
+}
+.movie-vote {
+  background: var(--primary-bg);
+  color: var(--highlight-color);
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.5rem;
+}
+.carousel-control-next {
+  transform: translateX(80%);
+}
+.carousel-control-prev {
+  transform: translateX(-80%);
+}
+.carousel-control-prev{
+  background: linear-gradient(to right, rgb(21, 38, 64) 0%, rgba(0, 0, 0, 0) 60%) !important;
+  border-radius: 5%;
+  border: none;
+}
+.carousel-control-next{
+  background: linear-gradient(to left, rgb(21, 38, 64) 0%, rgba(0, 0, 0, 0) 80%) !important;
+  border-radius: 5%;
+  border: none;
+}
+
+
+.custom-width {
+  padding-right: 15px;
+}

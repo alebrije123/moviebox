@@ -62,8 +62,13 @@
 /* Carousel Styles */
 .custom-carousel-home {
   padding-top: 20px;
-
 }
+
+/* Card Styles */
+.custom-cardResenia-home {
+  padding-top: 80px;
+}
+
 /*  background: #060e24;
 TODO
 */
@@ -82,12 +87,7 @@ TODO
 
 
 
-
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
-}
-
+/* Nuevos lanzamientos */
 
 
 @media (max-width: 768px) {

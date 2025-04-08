@@ -1,63 +1,69 @@
-import image1 from "../../assets/peli1.jpeg";
-
-interface CardProps {
-  title: string;
-  text: string;
-  imgSrc: string;
-}
-
-const Card: React.FC<CardProps> = ({ title, text, imgSrc }) => {
-  return (
-    <div className="col">
-      <div className="card">
-        <img src={imgSrc} alt={title} className="card-img-top" />
-        <div className="card-body">
-          <h5 className="card-title">{title}</h5>
-          <p className="card-text">{text}</p>
-          <a href="#" className="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-  );
-};
+import "../../css/lanzamientos.css";
+const movies = [
+  {
+    id: 1,
+    name: "Movie Name",
+    description:"Lorem ipsum dolor sit amet consectetur adipiscing elit mollis, feugiat magna consequat fames accumsan cum lobortis posuere.",
+    image:
+      "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%201.png",
+  },
+  {
+    id: 2,
+    name: "Movie Name",
+    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit mollis, feugiat magna consequat fames accumsan cum lobortis posuere.",
+    image:
+      "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%202.png",
+  },
+  {
+    id: 3,
+    name: "Movie Name",
+    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit mollis, feugiat magna consequat fames accumsan cum lobortis posuere.",
+    image:
+      "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%203.png",
+  },
+  {
+    id: 4,
+    name: "Movie Name",
+    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit mollis, feugiat magna consequat fames accumsan cum lobortis posuere.",
+    image:
+      "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%204.png",
+  },
+  {
+    id: 5,
+    name: "Movie Name",
+    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit mollis, feugiat magna consequat fames accumsan cum lobortis posuere.",
+    image:
+      "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%205.png",
+  },
+  {
+    id: 6,
+    name: "Movie Name",
+    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit mollis, feugiat magna consequat fames accumsan cum lobortis posuere.",
+    image:
+      "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%206.png",
+  },
+];
 
 export const CardLanzamientos = () => {
-  const cards = [
-    {
-      title: "Card title",
-      text: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-      imgSrc: image1,
-    },
-    {
-      title: "Card title",
-      text: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-      imgSrc: image1,
-    },
-    {
-      title: "Card title",
-      text: "This is a longer card with supporting text below as a natural lead-in to additional content.",
-      imgSrc: image1,
-    },
-    {
-      title: "Card title",
-      text: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-      imgSrc: image1,
-    },
-  ];
-
   return (
-    <div className="container d-flex justify-content-center">
-      <div className="w-75">
-        <div className="row row-cols-1 row-cols-md-2 g-4">
-          {cards.map((card, index) => (
-            <Card
-              key={index}
-              title={card.title}
-              text={card.text}
-              imgSrc={card.imgSrc}
+    <div className="d-flex justify-content-center movies-list">
+      <div className="card-container-peliculas">
+        {movies.map((movie) => (
+          <div
+            key={movie.id}
+            className="bg-gray-800 rounded-lg overflow-hidden shadow-lg w-64 card-container-information"
+          >
+            <img
+              src={movie.image}
+              alt={movie.name}
+              className="w-full h-80 object-cover card-img-link"
             />
-          ))}
-        </div>
+            <div className="p-4 card-body-information">
+              <h2 className="text-lg font-bold name-movie">{movie.name}</h2>
+              <p className="text-sm text-gray-400 description-movie">{movie.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
