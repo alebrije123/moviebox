@@ -4,7 +4,6 @@
   width: 100%;
   height: 400px;
   position: relative;
-  margin: 10px 0 20px;
 }
 .card-container-peliculas {
   height: 400px;
@@ -18,8 +17,8 @@
 }
 .card-container-information {
   position: relative;
-  min-width: 250px;
-  width: 250px;
+  min-width: 220px;
+  width: 220px;
   height: 300px;
   border-radius: 5px;
   overflow: hidden;

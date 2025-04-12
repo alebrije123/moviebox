@@ -30,7 +30,7 @@
   height: 100%;
   transform: scale(1);
   transition: all 1s;
-  margin: 0 50px; /* Centrar horizontalmente */
+  margin: 0 50px;
   background-color: #0e193a; /*AQUI ES DONDE CAMBIA EL COLOR DEL FONDO DE LA TARJETA?*/
   max-width: 300px;
   border-radius: 30px;
@@ -64,6 +64,11 @@
   padding-top: 20px;
 }
 
+/* Carousel Styles */
+.custom-carousel-explore {
+  padding-top: 120px;
+}
+
 /* Card Styles */
 .custom-cardResenia-home {
   padding-top: 80px;
@@ -73,7 +78,7 @@
 TODO
 */
 .container-todo-home{
-  background: linear-gradient(135deg, #060e24, #2f1335);
+  background: #0e0f27;
   padding-top: 100px;
 }
 
