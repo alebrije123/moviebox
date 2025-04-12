@@ -23,14 +23,14 @@ export const Login = () => {
         <div className="iconLogin">
           <i className="bi bi-person-circle"></i>
         </div>
-        <h2 className="text-center text-white">Iniciar sesión</h2>
+        <h2 className="text-center text-white h2-login">Iniciar sesión</h2>
 
         {error && <div className="alert alert-danger text-center">{error}</div>}
 
-        <Form className="container-form" onSubmit={handleSubmit}>
+        <Form className="container-form-login" onSubmit={handleSubmit}>
           <Form.Group controlId="formEmail" className="mb-3 input-box">
             <InputGroup>
-              <span className="input-icon">
+              <span className="input-icon-login">
                 <i className="bi bi-person-fill"></i>
               </span>
               <Form.Control
@@ -42,9 +42,9 @@ export const Login = () => {
             </InputGroup>
           </Form.Group>
 
-          <Form.Group controlId="formPassword" className="mb-4 input-box">
+          <Form.Group controlId="formPassword" className="mb-4 input-box-login">
             <InputGroup>
-              <span className="input-icon">
+              <span className="input-icon-login">
                 <i className="bi bi-lock-fill"></i>
               </span>
               <Form.Control
@@ -53,15 +53,17 @@ export const Login = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <span className="input-icon toggle-password">
+              <span className="input-icon-login toggle-password">
                 <i className="bi bi-eye-slash-fill"></i>
               </span>
             </InputGroup>
           </Form.Group>
 
-          <Button variant="primary" type="submit" className="btn-login">
-            Iniciar sesión
-          </Button>
+          <div className="form-button-container">
+            <Button variant="primary" type="submit" className="btn-login w-75">
+              Iniciar sesión
+            </Button>
+          </div>
         </Form>
       </Container>
     </>

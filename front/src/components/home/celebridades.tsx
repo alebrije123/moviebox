@@ -39,7 +39,7 @@ export const Celebridades = () => {
       {movies.map((movie) => (
         <div key={movie.id} className="image-wrapper">
           <img src={movie.image} alt={movie.name} className="image" />
-          <h2>{movie.name}</h2>
+          <h2 className="text-white">{movie.name}</h2>
         </div>
       ))}
     </div>

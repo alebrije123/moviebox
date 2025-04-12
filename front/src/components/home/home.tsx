@@ -1,4 +1,5 @@
 import { FeaturedMoviesCarousel } from "./home_featuredMoviesCarousel";
+import { ExplorerMoviesCarousel } from "./explorerMovieCarousel";
 import { CardGrid } from "./resenia";
 import { CardLanzamientos } from "./lanzamientos";
 import { WelcomeCards } from "./home_welcomeCards";
@@ -16,6 +17,9 @@ export const Home = () => {
         <div className="custom-carousel-home">
           <FeaturedMoviesCarousel />
         </div>
+        <div className="custom-carousel-explore">
+          <ExplorerMoviesCarousel />
+        </div>
         <div className="custom-cardResenia-home">
           <CardGrid />
         </div>
@@ -23,7 +27,6 @@ export const Home = () => {
         <div className="custom-cardGrid-home">
           <CardLanzamientos />
         </div>
-        <h1 className="texto-titulo">Publicaciones</h1>
         <h1 className="texto-titulo">Celebridades</h1>
         <div className="custom-cardGrid-home">
           <Celebridades />
