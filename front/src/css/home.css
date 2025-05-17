@@ -74,11 +74,16 @@
   padding-top: 80px;
 }
 
+
 /*  background: #060e24;
 TODO
 */
 .container-todo-home{
-  background: #0e0f27;
+  background: radial-gradient(
+    circle at top center,
+    rgba(50, 9, 60, 0.7),
+    #0e0f27 18%
+  );
   padding-top: 100px;
 }
 
@@ -86,6 +91,7 @@ TODO
   color: #ffffff;
   font-size: 4rem;
   /*text-shadow: 20px 20px 15px rgba(0, 0, 0, 0.5);*/
+  padding-top: 50px;
   margin-left: 10%;
   margin-right: 15%;
 }

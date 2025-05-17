@@ -4,38 +4,38 @@ import "../../css/explorerMovieCrousel.css";
 const images = [
   {
     src: "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%207.png",
-    title: "Pelicula 1",
+    title: "Pelicula",
   },
   {
     src: "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%202.png",
-    title: "Pelicula 2",
+    title: "Pelicula",
   },
   {
     src: "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%203.png",
-    title: "Pelicula 3",
+    title: "Pelicula",
   },
   {
     src: "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%204.png",
-    title: "Pelicula 4",
+    title: "Pelicula",
   },
   {
     src: "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%205.png",
-    title: "Pelicula 5",
+    title: "Pelicula",
   },
 
   {
     src: "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%206.png",
-    title: "Pelicula 6",
+    title: "Pelicula",
   },
 
   {
     src: "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%209.png",
-    title: "Pelicula 7",
+    title: "Pelicula",
   },
 
   {
     src: "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%2010.png",
-    title: "Pelicula 8",
+    title: "Pelicula",
   },
 ];
 

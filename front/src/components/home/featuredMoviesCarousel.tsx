@@ -1,17 +1,6 @@
 import "../../css/featuredMoviesCarousel.css";
 import React, { useState, useEffect } from "react";
 
-const imags = [
-  "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%207.png",
-  "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%202.png",
-  "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%203.png",
-  "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%204.png",
-  "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%205.png",
-  "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%206.png",
-  "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%209.png",
-  "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%2010.png",
-];
-
 const images = [
   {
     src: "https://raw.githubusercontent.com/kunaal438/disney-plus-clone/master/images/poster%207.png",
@@ -77,6 +66,17 @@ const images = [
 
 export const FeaturedMoviesCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [isPaused, currentSlide]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % images.length);
@@ -86,10 +86,7 @@ export const FeaturedMoviesCarousel = () => {
     setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
-    return () => clearInterval(interval);
-  }, []);
+
   return (
     <>
       <h1 className="carousel-title-principal text-center text-white">
@@ -100,9 +97,7 @@ export const FeaturedMoviesCarousel = () => {
         <div className="carousel-inner">
           {images.map((item, index) => (
             <div
-              className={`carousel-item ${
-                index === currentSlide ? "active" : "inactive"
-              }`}
+              className={`carousel-item ${index === currentSlide ? "active" : "inactive"}`}
               key={index}
               style={{ display: index === currentSlide ? "flex" : "none" }}
             >
@@ -148,11 +143,21 @@ export const FeaturedMoviesCarousel = () => {
           ))}
         </div>
 
-        <button className="btn-custom prev" onClick={prevSlide}>
-        <i className="bi bi-chevron-left"></i>
+        <button
+          className="btn-custom prev"
+          onClick={prevSlide}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <i className="bi bi-chevron-left"></i>
         </button>
-        <button className="btn-custom next" onClick={nextSlide}>
-        <i className="bi bi-chevron-right"></i>
+        <button
+          className="btn-custom next"
+          onClick={nextSlide}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <i className="bi bi-chevron-right"></i>
         </button>
 
         <div className="custom-indicators d-flex justify-content-center mt-3">

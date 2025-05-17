@@ -1,8 +1,8 @@
-import { FeaturedMoviesCarousel } from "./home_featuredMoviesCarousel";
+import { FeaturedMoviesCarousel } from "./featuredMoviesCarousel";
 import { ExplorerMoviesCarousel } from "./explorerMovieCarousel";
 import { CardGrid } from "./resenia";
 import { CardLanzamientos } from "./lanzamientos";
-import { WelcomeCards } from "./home_welcomeCards";
+import { WelcomeCards } from "./welcomeCards";
 import { Celebridades } from "./celebridades";
 import "../../css/home.css";
 

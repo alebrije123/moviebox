@@ -18,6 +18,7 @@
   width: 230px;
   height: auto;
   cursor: pointer;
+  border-radius: 5%;
 }
 
 .container-titulo-anio {
@@ -38,6 +39,7 @@
   margin-bottom: 0;
   text-align: justify;
 }
+
 .ver-mas-btn {
   color: rgb(110, 110, 173);
   background: none;
@@ -50,13 +52,24 @@
   margin-top: 15px;
 }
 
-.card-container:not(:last-child)::after {
+.card-container::after {
   content: "";
   display: block;
   width: 100%;
-  height: 1px;
+  height: 2px;
+  background-color: #ccc;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.card-top-reseniadores::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
   background-color: #ccc;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .texto-titulo-resenia:not(:last-child)::after{

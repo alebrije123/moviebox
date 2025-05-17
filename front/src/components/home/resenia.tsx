@@ -102,7 +102,7 @@ export const CardGrid = () => {
                     <img
                       src={item.src}
                       alt={item.title}
-                      className="card-img-left card-img-resenia"
+                      className="card-img-resenia"
                     />
                     <div className="card-body d-flex flex-column text-white ">
                       <h4 className="card-title titulo-pelicula">
@@ -160,22 +160,21 @@ export const CardGrid = () => {
         <div
           className="position-absolute"
           style={{
-            left: "calc(55% + 320px)",
-            width: "20%",
+            left: "calc(58% + 320px)",
+            width: "17%",
           }}
         >
           <div className="texto-titulo-resenia">
             <div className="d-flex justify-content-between align-items-center text-white">
               <h2>Top Reseñadores</h2>
-              
             </div>
           </div>
           {images.map((item, index) => (
             <div
-              className="card-container text-white d-flex flex-column"
+              className="card-top-reseniadores text-white d-flex flex-column"
               key={index}
             >
-              <div className="d-flex align-items-center gap-3 resenia-info-usuario mb-1">
+              <div className="d-flex align-items-center gap-3 resenia-info-usuario mb-1 ms-2">
                 <img
                   src={item.foto_perfil}
                   className="img-perfil rounded-circle"
@@ -186,6 +185,7 @@ export const CardGrid = () => {
                     {item.autor}
                   </h5>
                   <div className="d-flex gap-1">
+                    <i className="bi bi-chat-right-text-fill me-1"></i>
                     <h5 className="card-title mb-0">{item.comentarios}</h5>
                     <h5 className="card-title mb-0">Reseñas</h5>
                   </div>
